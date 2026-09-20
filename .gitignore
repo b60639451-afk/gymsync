@@ -1,0 +1,8 @@
+node_modules/
+dist/
+build/
+.env
+gymsync.db
+gymsync.db-wal
+gymsync.db-shm
+.DS_Store
