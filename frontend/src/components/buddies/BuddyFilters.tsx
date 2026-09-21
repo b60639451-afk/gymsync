@@ -18,8 +18,12 @@ export default function BuddyFiltersBar({ filters, onChange }: Props) {
 
   return (
     <div
-      className="card p-4 flex flex-col md:flex-row gap-3 items-stretch md:items-center"
-      style={{ borderRadius: 16 }}
+      className="w-full grid grid-cols-1 md:grid-cols-3 gap-4 p-5 rounded-2xl items-center"
+      style={{
+        background: 'var(--bg-card)',
+        border: '1px solid var(--border)',
+        boxShadow: 'var(--shadow-sm)'
+      }}
     >
       {/* City */}
       <div className="relative flex-1 min-w-36">
@@ -29,7 +33,7 @@ export default function BuddyFiltersBar({ filters, onChange }: Props) {
           style={{ color: 'var(--text-muted)' }}
         />
         <input
-          className="input-field pl-9 text-sm"
+          className="input-field w-full h-11 pl-9 text-sm"
           placeholder="Город / Район"
           value={filters.city}
           onChange={(e) => update({ city: e.target.value })}
@@ -44,7 +48,7 @@ export default function BuddyFiltersBar({ filters, onChange }: Props) {
           style={{ color: 'var(--text-muted)' }}
         />
         <input
-          className="input-field pl-9 text-sm"
+          className="input-field w-full h-11 pl-9 text-sm"
           placeholder="Фитнес-клуб"
           value={filters.gymName}
           onChange={(e) => update({ gymName: e.target.value })}
@@ -53,10 +57,9 @@ export default function BuddyFiltersBar({ filters, onChange }: Props) {
 
       {/* Goal select */}
       <select
-        className="input-field text-sm flex-1 min-w-36"
+        className="input-field w-full h-11 text-sm cursor-pointer"
         value={filters.goal}
         onChange={(e) => update({ goal: e.target.value as GoalType | '' })}
-        style={{ cursor: 'pointer' }}
       >
         {GOAL_OPTIONS.map(({ value, label }) => (
           <option key={value} value={value} style={{ background: '#0D1117' }}>
