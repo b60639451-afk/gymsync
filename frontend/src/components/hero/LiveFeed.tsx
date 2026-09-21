@@ -2,7 +2,6 @@ import { useEffect, useState } from 'react';
 import { MapPin, Clock, User, Target } from 'lucide-react';
 import type { BuddyRequest } from '../../types';
 import { getBuddies } from '../../api/client';
-import { GOAL_LABELS } from '../../types';
 
 const DEMO_ITEMS: BuddyRequest[] = [
   {
