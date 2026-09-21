@@ -39,7 +39,7 @@ export default function BuddyBoard() {
   return (
     <div>
       {/* Top bar */}
-      <div className="flex items-center justify-between mb-6 gap-4">
+      <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between mb-6 gap-4">
         <div className="flex items-center gap-3">
           <div
             className="w-10 h-10 rounded-xl flex items-center justify-center"

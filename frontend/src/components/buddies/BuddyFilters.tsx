@@ -18,7 +18,7 @@ export default function BuddyFiltersBar({ filters, onChange }: Props) {
 
   return (
     <div
-      className="glass-card p-4 flex flex-wrap gap-3 items-center"
+      className="card p-4 flex flex-col md:flex-row gap-3 items-stretch md:items-center"
       style={{ borderRadius: 16 }}
     >
       {/* City */}
